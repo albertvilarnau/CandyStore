@@ -6,6 +6,8 @@ function LogOut(){
         if (usuarios[`user${i}`].active = true){
             usuarios[`user${i}`] = false;
         }
+        let usuariosString = JSON.stringify(usuarios);
+        localStorage.setItem("usuarios", usuariosString);
         location.href = "index.html"
     }
 }

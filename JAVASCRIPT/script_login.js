@@ -4,24 +4,20 @@ let usuarios = {
     "user2": {user:"kike", password:"1111", q1:0, q2:0, q3:0, q4:0, q5:0, q6:0, q7:0, q8:0, active:false},
 }
 
-let usuariosString = JSON.stringify(usuarios);
-
-localStorage.setItem("usuarios", usuariosString);
-
+if (!localStorage.getItem("usuarios")) {
+    localStorage.setItem("usuarios", JSON.stringify(usuarios));
+}
 function LogIn(){
-    usuariosString = localStorage.getItem("usuarios");
-    usuarios = JSON.parse(usuariosString)
+    document.getElementById("error_password").innerHTML = "";
+    document.getElementById("error_user").innerHTML = "";
+    document.getElementById("error_general").innerHTML = "";
 
-    let ui_user  = document.getElementById("ui_user").value;
-    let ui_password  = document.getElementById("ui_password").value;
-
-    console.log(ui_user, ui_password);
+    let usuarios = JSON.parse(localStorage.getItem("usuarios"));
+    let ui_user = document.getElementById("ui_user").value.trim();
+    let ui_password = document.getElementById("ui_password").value.trim();
 
     for(let i = 0; i < Object.keys(usuarios).length; i++){
-        if (usuarios[`user${i}`].active = true){
-            alert(`Welcome, ${usuarios[`user${i}`].user} to the Sugar Cave`);
-            location.href = "store.html"
-        } if(!ui_password){
+         if(!ui_password){
             document.getElementById("error_password").innerHTML = "Password is required"
         } if(!ui_user){
             document.getElementById("error_user").innerHTML = "User is required"
@@ -30,7 +26,27 @@ function LogIn(){
         } if(ui_user == usuarios[`user${i}`].user && ui_password == usuarios[`user${i}`].password){
             usuarios[`user${i}`].active = true;
             alert(`Welcome, ${usuarios[`user${i}`].user} to the Sugar Cave`);
-            location.href = "store.html"
+            let usuariosString = JSON.stringify(usuarios);
+            localStorage.setItem("usuarios", usuariosString);
+            console.log(usuarios[`user${i}`]);
+            location.href = "store.html";
+
         } 
     }
+}
+
+window.onload = function CheckUsers() {
+    usuariosString = localStorage.getItem("usuarios");
+    usuarios = JSON.parse(usuariosString);
+
+    for (let i = 0; i < Object.keys(usuarios).length; i++) {
+        if (usuarios[`user${i}`].active) {
+            alert(`Welcome, ${usuarios[`user${i}`].user} to the Sugar Cave`);
+            location.href = "store.html";
+            break;
+        }
+    }
+}
+function ClearCache(){
+    localStorage.clear();
 }
