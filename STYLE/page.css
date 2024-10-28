@@ -6,12 +6,10 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #ffe4e1;
+    background-color: #ffb683;
     color: #333;
     text-align: center;
 }
-
-
 
 /* Sección de productos */
 .productos {
@@ -20,7 +18,7 @@ body {
 
 .productos h2 {
     font-size: 28px;
-    color: #ff69b4;
+    color: #ea101a;
 }
 
 .producto-lista {
@@ -50,7 +48,7 @@ body {
 
 .producto h3 {
     font-size: 20px;
-    color: #ff1493;
+    color: #ea101a;
 }
 
 .producto p {
@@ -59,7 +57,7 @@ body {
 }
 
 .comprar {
-    background-color: #ff1493;
+    background-color: #ea101a;
     color: white;
     border: none;
     padding: 10px 15px;
@@ -70,7 +68,9 @@ body {
 }
 
 .comprar:hover {
-    background-color: #ff69b4;
+    background-color: #fe7b63;
+    color: white;
+
 }
 
 img{
@@ -80,7 +80,7 @@ img{
 button {
     width: auto;
     padding: 10px;
-    background-color: #ef047a;
+    background-color: #ea101a;
     color: white;
     border: none;
     border-radius: 4px;
@@ -88,18 +88,15 @@ button {
     margin: 5px;
 }
 
-button:hover {
-    background-color: #f9f51c;
-    color: black;
-}
 
     header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #e74fd3;
+    background-color: #ea101a;
     color: #fff;
+    font-size: 30px;
   }
   
   .header-left {
@@ -108,8 +105,8 @@ button:hover {
   }
   
   .logo {
-    width: 40px;
-    height: 40px;
+    width: 90px;
+    height: 90px;
     margin-right: 10px;
   }
   
@@ -131,11 +128,7 @@ button:hover {
     filter: invert(100%);
   }
   
-  .icon {
-    text-decoration: none;
-    display: inline-block;
-    color: #fff;
-  }
+
   .icon:hover {
     color: #ddd;
   }
@@ -153,7 +146,7 @@ button:hover {
     color: #fff;
     font-size: 16px;
     font-weight: bold;
-    cursor: pointer; /* Cambia el cursor al icono de clic */
+    cursor: pointer; 
   }
   
   
@@ -162,4 +155,5 @@ button:hover {
     font-size: 1rem;
     color: #ffffff;
   }
+  
   

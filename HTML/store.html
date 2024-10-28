@@ -12,8 +12,9 @@
 <body>
     <header>
         <div class="header-left">
-            <img src="logo.png" alt="Logo de la web" class="logo">
-            <a href="store.html" class="home">Home</a>
+            <img src="../IMAGES/logo.png" alt="Logo de la web" class="logo">
+            <a href="store.html" class="home">
+                Home</a>
         </div>
         <div class="header-right">
                 <a href="cesta.html" class="icon" title="Cesta">
@@ -37,6 +38,7 @@
                                 d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10s10-4.477 10-10S17.523 2 12 2M8.5 9.5a3.5 3.5 0 1 1 7 0a3.5 3.5 0 0 1-7 0m9.758 7.484A7.99 7.99 0 0 1 12 20a7.99 7.99 0 0 1-6.258-3.016C7.363 15.821 9.575 15 12 15s4.637.821 6.258 1.984" />
                         </g>
                     </svg>
+                    <span id="user_header"></span>
                 </a>
         </div>
     </header>
@@ -49,28 +51,28 @@
                 <img src="../IMAGES/producto_chupachups.png" alt="">
                 <h3>ChupaChups</h3>
                 <p>Piruleta española con palo, famosa por su variedad de sabores.</p>
-                <button class="comprar" onclick="AddCesta(0)">Comprar</button>
+                <button class="comprar" onclick="ModCesta(0, 1)">Comprar</button>
                 <p>En cesta : <span id="cesta_span0"></span></p>
             </div>
             <div class="producto">
-                <img src="../IMAGES/producto_petazeta.jpg" alt="">
+                <img src="../IMAGES/producto_petazeta.png" alt="">
                 <h3>Peta Zetas</h3>
                 <p>Caramelos que explotan en la boca al contacto con la saliva.</p>
-                <button class="comprar" onclick="AddCesta(1)">Comprar</button>
+                <button class="comprar" onclick="ModCesta(1, 1)">Comprar</button>
                 <p>En cesta : <span id="cesta_span1">0</span></p>
             </div>
             <div class="producto">
-                <img src="../IMAGES/producto_maxiroll.jpg" alt="">
+                <img src="../IMAGES/producto_maxiroll.png" alt="">
                 <h3>Maxiroll boomer</h3>
                 <p>Chicle en forma de cinta larga, que se puede cortar a gusto.</p>
-                <button class="comprar" onclick="AddCesta(2)">Comprar</button>
+                <button class="comprar" onclick="ModCesta(2, 1)">Comprar</button>
                 <p>En cesta : <span id="cesta_span2">0</span></p>
             </div>
             <div class="producto">
                 <img src="../IMAGES/producto_pez.png" alt="">
                 <h3>Caramelos Pez</h3>
                 <p>Caramelos dispensados por un dispositivo con cabezas de personajes populares.</p>
-                <button class="comprar" onclick="AddCesta(3)">Comprar</button>
+                <button class="comprar" onclick="ModCesta(3, 1)">Comprar</button>
                 <p>En cesta : <span id="cesta_span3">0</span></p>
             </div>
         </div>
@@ -78,36 +80,36 @@
 
         <div class="producto-lista">
             <div class="producto">
-                <img src="../IMAGES/producto_kinderbueno.jpg" alt="">
+                <img src="../IMAGES/producto_kinderbueno.png" alt="">
                 <h3>Kinder Bueno</h3>
                 <p>Chocolate con leche y avellanas, suave y cremoso.</p>
-                <button class="comprar" onclick="AddCesta(4)">Comprar</button>
+                <button class="comprar" onclick="ModCesta(4, 1)">Comprar</button>
                 <p>En cesta : <span id="cesta_span4">0</span></p>
             </div>
             <div class="producto">
-                <img src="../IMAGES/producto_frocher.jpg" alt="">
+                <img src="../IMAGES/producto_frocher.png" alt="">
                 <h3>Ferrero Rocher</h3>
                 <p>Bombón con avellana y cobertura crujiente, elegante y dulce.</p>
-                <button class="comprar" onclick="AddCesta(5)">Comprar</button>
+                <button class="comprar" onclick="ModCesta(5, 1)">Comprar</button>
                 <p>En cesta : <span id="cesta_span5">0</span></p>
             </div>
             <div class="producto">
-                <img src="../IMAGES/producto_lindt.jpg" alt="">
+                <img src="../IMAGES/producto_lindt.png" alt="">
                 <h3>Bombón Lindt</h3>
                 <p>Bombon negro con trozos de galleta, crujiente y dulce.</p>
-                <button class="comprar" onclick="AddCesta(6)">Comprar</button>
+                <button class="comprar" onclick="ModCesta(6, 1)">Comprar</button>
                 <p>En cesta : <span id="cesta_span6">0</span></p>
             </div>
             <div class="producto">
-                <img src="../IMAGES/producto_toblerone.jpg" alt="">
+                <img src="../IMAGES/producto_toblerone.png" alt="">
                 <h3>Toblerone</h3>
                 <p>Chocolate suizo con miel y almendras, en forma de triángulos.</p>
-                <button class="comprar" onclick="AddCesta(7)">Comprar</button>
+                <button class="comprar" onclick="ModCesta(7, 1)">Comprar</button>
                 <p>En cesta : <span id="cesta_span7">0</span></p>
             </div>
         </div>
     </section>
-
+    
 </body>
 
 </html>
