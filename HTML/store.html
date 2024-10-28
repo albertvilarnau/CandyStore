@@ -9,9 +9,15 @@
 </head>
 <body>
     <header>
-        <h1>Tienda de Chuches</h1>
-        <button onclick="LogOut()">Logout</button>
-        <span>Usuario</span>
+        <div>
+            <h1>Tienda de Chuches</h1>
+        </div>        
+        <div>
+            <button onclick="Redirect('store.html')">Home</button>
+            <button onclick="Redirect('cesta.html')">Cesta</button>
+            <button onclick="LogOut()">Logout</button>
+            User : <span id="user_header"></span>
+        </div>
     </header>
 
     <section class="productos">
@@ -22,49 +28,53 @@
                 <img src="../IMAGES/producto_chupachups.png" alt="">
                 <h3>ChupaChups</h3>
                 <p>Piruleta española con palo, famosa por su variedad de sabores.</p>
-                <button class="comprar">Comprar</button>
+                <button class="comprar" onclick="AddCesta(0)">Comprar</button>
+                <p>En cesta : <span id="cesta_span0"></span></p>
             </div>
             <div class="producto">
                 <img src="../IMAGES/producto_petazeta.jpg" alt="">
                 <h3>Peta Zetas</h3>
                 <p>Caramelos que explotan en la boca al contacto con la saliva.</p>
-                <button class="comprar">Comprar</button>
+                <button class="comprar" onclick="AddCesta(1)">Comprar</button>
+                <p>En cesta : <span id="cesta_span1">0</span></p>
             </div>
             <div class="producto">
                 <img src="../IMAGES/producto_maxiroll.jpg" alt="">
                 <h3>Maxiroll boomer</h3>
                 <p>Chicle en forma de cinta larga, que se puede cortar a gusto.</p>
-                <button class="comprar">Comprar</button>
+                <button class="comprar" onclick="AddCesta(2)">Comprar</button>
+                <p>En cesta : <span id="cesta_span2">0</span></p>
             </div>
             <div class="producto">
                 <img src="../IMAGES/producto_pez.png" alt="">
                 <h3>Caramelos Pez</h3>
                 <p>Caramelos dispensados por un dispositivo con cabezas de personajes populares.</p>
-                <button class="comprar">Comprar</button>
-            </div>
+                <button class="comprar" onclick="AddCesta(3)">Comprar</button>
+                <p>En cesta : <span id="cesta_span3">0</span></p>            </div>
             <div class="producto">
                 <img src="../IMAGES/producto_chupachups.png" alt="">
                 <h3>ChupaChups</h3>
                 <p>Piruleta española con palo, famosa por su variedad de sabores.</p>
-                <button class="comprar">Comprar</button>
-            </div>
+                <button class="comprar" onclick="AddCesta(4)">Comprar</button>
+                <p>En cesta : <span id="cesta_span4">0</span></p>            </div>
             <div class="producto">
                 <img src="../IMAGES/producto_chupachups.png" alt="">
                 <h3>ChupaChups</h3>
                 <p>Piruleta española con palo, famosa por su variedad de sabores.</p>
-                <button class="comprar">Comprar</button>
-            </div>
+                <button class="comprar" onclick="AddCesta(5)">Comprar</button>
+                <p>En cesta : <span id="cesta_span5">0</span></p>            </div>
             <div class="producto">
                 <img src="../IMAGES/producto_chupachups.png" alt="">
                 <h3>ChupaChups</h3>
                 <p>Piruleta española con palo, famosa por su variedad de sabores.</p>
-                <button class="comprar">Comprar</button>
-            </div>
+                <button class="comprar" onclick="AddCesta(6)">Comprar</button>
+                <p>En cesta : <span id="cesta_span6">0</span></p>            </div>
             <div class="producto">
                 <img src="../IMAGES/producto_chupachups.png" alt="">
                 <h3>ChupaChups</h3>
                 <p>Piruleta española con palo, famosa por su variedad de sabores.</p>
-                <button class="comprar">Comprar</button>
+                <button class="comprar" onclick="AddCesta(7)">Comprar</button>
+                <p>En cesta : <span id="cesta_span7">0</span></p>
             </div>
         </div>
     </section>

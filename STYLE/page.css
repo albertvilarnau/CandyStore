@@ -12,7 +12,6 @@ body {
     text-align: center;
 }
 
-/* Encabezado */
 header {
     background-color: #ff69b4;
     padding: 20px;
@@ -102,4 +101,20 @@ header h1 {
 
 img{
     height: 200px;
+}
+
+button {
+    width: auto;
+    padding: 10px;
+    background-color: #ef047a;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #f9f51c;
+    color: black;
 }
