@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Emilys+Candy&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Emilys Candy';
+}
+
+
+body{
+    background-color: #ffb683;
+    text-align: center;
+
+}

@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="../JAVASCRIPT/script_page.js"></script>
+    <link rel="stylesheet" href="../STYLE/header.css">
+    <link rel="stylesheet" href="../STYLE/general.css">
     <link rel="stylesheet" href="../STYLE/cesta.css">
+
 </head>
 
 <body>
@@ -21,6 +24,7 @@
                         <path fill="white"
                             d="M3 1a1 1 0 0 0 0 2h1.22l.305 1.222l.01.042l1.358 5.43l-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 0 0 0-2H6.414l1-1H14a1 1 0 0 0 .894-.553l3-6A1 1 0 0 0 17 3H6.28l-.31-1.243A1 1 0 0 0 5 1zm13 15.5a1.5 1.5 0 1 1-3 0a1.5 1.5 0 0 1 3 0M6.5 18a1.5 1.5 0 1 0 0-3a1.5 1.5 0 0 0 0 3" />
                     </svg> 
+                    <span id="total_cart"></span>
                 </a>
                 <a onclick="LogOut()" class="icon" title="Cerrar Sesión">
                     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 512 512">
@@ -28,7 +32,7 @@
                         <path fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="m288 336l80-80l-80-80M80 256h272" />
                     </svg>  
                 </a>
-                <a href="#" class="icon" title="Usuario">
+                <a href="user.html" class="icon" title="Usuario">
                     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
                         <g fill="none" fill-rule="evenodd">
                             <path
@@ -46,7 +50,7 @@
         <div class="product_cesta cesta_producto0">
             <img src="../IMAGES/producto_chupachups.png" alt="Chupa Chups">
             <span>ChupaChups</span>
-            <span>€10</span>
+            <p><span id="price_span0">0 </span>€</p>
             <button onclick="ModCesta(0, -1)">-</button>
             <span id="cesta_span0">0</span>
             <button onclick="ModCesta(0, 1)">+</button>
@@ -54,7 +58,7 @@
         <div class="product_cesta cesta_producto1">
             <img src="../IMAGES/producto_petazeta.png" alt="Peta Zetas">
             <span>Peta Zetas</span>
-            <span>€1.50</span>
+            <p><span id="price_span1">0 </span>€</p>
             <button onclick="ModCesta(1, -1)">-</button>
             <span id="cesta_span1">0</span>
             <button onclick="ModCesta(1, 1)">+</button>
@@ -62,7 +66,7 @@
         <div class="product_cesta cesta_producto2">
             <img src="../IMAGES/producto_maxiroll.png" alt="Maxiroll Boomer">
             <span>Maxiroll Boomer</span>
-            <span>€2.00</span> 
+            <p><span id="price_span2">0 </span>€</p>
             <button onclick="ModCesta(2, -1)">-</button>
             <span id="cesta_span2">0</span>
             <button onclick="ModCesta(2, 1)">+</button>
@@ -70,7 +74,7 @@
         <div class="product_cesta cesta_producto3">
             <img src="../IMAGES/producto_pez.png" alt="Caramelos Pez">
             <span>Caramelos Pez</span>
-            <span>€3.00</span>
+            <p><span id="price_span3">0 </span>€</p>
             <button onclick="ModCesta(3, -1)">-</button>
             <span id="cesta_span3">0</span>
             <button onclick="ModCesta(3, 1)">+</button>
@@ -78,7 +82,7 @@
         <div class="product_cesta cesta_producto4">
             <img src="../IMAGES/producto_kinderbueno.png" alt="Kinder Bueno">
             <span>Kinder Bueno</span>
-            <span>€1.20</span>
+            <p><span id="price_span4">0 </span>€</p>
             <button onclick="ModCesta(4, -1)">-</button>
             <span id="cesta_span4">0</span>
             <button onclick="ModCesta(4, 1)">+</button>
@@ -86,7 +90,7 @@
         <div class="product_cesta cesta_producto5">
             <img src="../IMAGES/producto_frocher.png" alt="Ferrero Rocher">
             <span>Ferrero Rocher</span>
-            <span>€1.50</span> 
+            <p><span id="price_span5">0 </span>€</p>
             <button onclick="ModCesta(5, -1)">-</button>
             <span id="cesta_span5">0</span>
             <button onclick="ModCesta(5, 1)">+</button>
@@ -94,7 +98,7 @@
         <div class="product_cesta cesta_producto6">
             <img src="../IMAGES/producto_lindt.png" alt="Bombón Lindt">
             <span>Bombón Lindt</span>
-            <span>€2.50</span> 
+            <p><span id="price_span6">0 </span>€</p>
             <button onclick="ModCesta(6, -1)">-</button>
             <span id="cesta_span6">0</span>
             <button onclick="ModCesta(6, 1)">+</button>
@@ -102,12 +106,12 @@
         <div class="product_cesta cesta_producto7">
             <img src="../IMAGES/producto_toblerone.png" alt="Toblerone">
             <span>Toblerone</span>
-            <span>€2.20</span>
+            <p><span id="price_span7">0 </span>€</p>
             <button onclick="ModCesta(7, -1)">-</button>
             <span id="cesta_span7">0</span>
             <button onclick="ModCesta(7, 1)">+</button>
         </div>
-        <div class="product_cesta">
+        <div class="buttons_cesta">
             <button onclick="CompletarCompra()">Completar Compra</button>
             <button onclick="VaciarCesta()">Reiniciar cesta</button>
         </div>

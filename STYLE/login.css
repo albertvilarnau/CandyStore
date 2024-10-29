@@ -1,50 +1,56 @@
+/* Estilo general para el cuerpo de la página */
 body {
-    font-family: Arial, sans-serif;
+    background-color: #ea101a; /* Fondo rojo */
+    font-family: 'Arial', sans-serif; /* Fuente general */
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-image: url(../IMAGES/background.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    height: 100vh; /* Altura completa de la ventana */
+    margin: 0; /* Sin margen */
 }
 
+/* Estilo para el contenedor del formulario */
 #form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff; /* Fondo blanco para el formulario */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 8px; /* Esquinas redondeadas */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra del formulario */
+    width: 300px; /* Ancho del formulario */
 }
 
-input[type="text"], input[type="password"] {
-    width: 250px;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+/* Estilo para los campos de entrada */
+input[type="text"],
+input[type="password"] {
+    width: 100%; /* Ancho completo */
+    padding: 10px; /* Espaciado interno */
+    margin: 10px 0; /* Margen superior e inferior */
+    border: 1px solid #fe7b63; /* Borde color claro */
+    border-radius: 5px; /* Esquinas redondeadas */
+    font-size: 16px; /* Tamaño de la fuente */
 }
 
+/* Estilo para los mensajes de error */
+.error {
+    color: #ea101a; /* Color rojo para mensajes de error */
+    font-size: 12px; /* Tamaño de la fuente para errores */
+    margin-bottom: 10px; /* Espaciado inferior */
+}
+
+/* Estilo para los botones */
 button {
-    width: 270px;
-    padding: 10px;
-    background-color: #ef047a;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin: 5px;
+    background-color: #fe7b63; /* Fondo claro para botones */
+    color: white; /* Color del texto blanco */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Esquinas redondeadas */
+    padding: 10px; /* Espaciado interno */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    width: 100%; /* Ancho completo */
+    margin-top: 10px; /* Margen superior */
+    font-size: 16px; /* Tamaño de la fuente */
+    transition: background-color 0.3s; /* Transición suave de color */
 }
 
+/* Efecto al pasar el mouse sobre los botones */
 button:hover {
-    background-color: #f9f51c;
-    color: black;
-}
-
-.error{
-    color: red;
+    background-color: #ea101a; /* Cambio de color al pasar el mouse */
 }
