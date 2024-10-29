@@ -3,8 +3,8 @@ function LogOut() {
     if (!usuarios) return;
 
     for (let i = 0; i < usuarios.length; i++) {
-        if (usuarios[i][10] === true) {
-            usuarios[i][10] = false;
+        if (usuarios[i][4]) {
+            usuarios[i][4] = false;
         }
     }
     localStorage.setItem("usuarios", JSON.stringify(usuarios));
@@ -16,40 +16,68 @@ window.onload = function OnLoadPage() {
     let usuarios = JSON.parse(localStorage.getItem("usuarios"));
     if (usuarios) {
         for (let i = 0; i < usuarios.length; i++) {
-            if (usuarios[i][10] === true) {
+            if (usuarios[i][4]) {
                 ActiveUser = usuarios[i][0];
+                for (let n = 0; n < usuarios[i][3].length; n++) {
+                    document.getElementById(`cesta_span${n}`).innerHTML = usuarios[i][3][n];
+                }
             }
         }
     }
     document.getElementById("user_header").innerHTML = ActiveUser;
-
-    initializeCesta(); // Inicializa la cesta
-
-    let cesta = JSON.parse(localStorage.getItem("cesta"));
-    if (cesta) {
-        for (let i = 0; i < cesta.length; i++) {
-            document.getElementById(`cesta_span${i}`).innerHTML = cesta[i];
-        }
-    }
-}
-
-function initializeCesta() {
-    if (!localStorage.getItem("cesta")) {
-        let cesta = [0, 0, 0, 0, 0, 0, 0, 0];
-        localStorage.setItem("cesta", JSON.stringify(cesta));
-    }
-}
+};
 
 function Redirect(site) {
     location.href = site;
 }
 
 function ModCesta(producto, cantidad) {
-    initializeCesta();
-    let cesta = JSON.parse(localStorage.getItem("cesta"));
-    if((cantidad == -1 && cesta[producto] > 0)||(cantidad == 1 && cesta[producto] >= 0)){
-        cesta[producto] += cantidad;
-        document.getElementById(`cesta_span${producto}`).innerHTML = cesta[producto];
-        localStorage.setItem("cesta", JSON.stringify(cesta));
+    let usuarios = JSON.parse(localStorage.getItem("usuarios"));
+    if (!usuarios) return;
+
+    for (let i = 0; i < usuarios.length; i++) {
+        if (usuarios[i][4]) {
+            if (
+                (cantidad === -1 && usuarios[i][3][producto] > 0) ||
+                (cantidad === 1 && usuarios[i][3][producto] >= 0)
+            ) {
+                usuarios[i][3][producto] += cantidad;
+                document.getElementById(`cesta_span${producto}`).innerHTML = usuarios[i][3][producto];
+                localStorage.setItem("usuarios", JSON.stringify(usuarios));
+            }
+            break;
+        }
     }
+}
+
+function CompletarCompra() {
+    let usuarios = JSON.parse(localStorage.getItem("usuarios"));
+    if (!usuarios) return;
+
+    for (let i = 0; i < usuarios.length; i++) {
+        if (usuarios[i][4]) {
+            for (let n = 0; n < usuarios[i][3].length; n++) {
+                usuarios[i][2][n] += usuarios[i][3][n]; 
+            }
+            localStorage.setItem("usuarios", JSON.stringify(usuarios)); 
+            VaciarCesta();
+            break;
+        }
+    }
+}
+
+function VaciarCesta() {
+    let usuarios = JSON.parse(localStorage.getItem("usuarios"));
+    if (!usuarios) return;
+
+    for (let i = 0; i < usuarios.length; i++) {
+        if (usuarios[i][4]) {
+            for (let n = 0; n < usuarios[i][3].length; n++) {
+                usuarios[i][3][n] = 0;
+                document.getElementById(`cesta_span${n}`).innerHTML = usuarios[i][3][n];
+            }
+            break;
+        }
+    }
+    localStorage.setItem("usuarios", JSON.stringify(usuarios)); 
 }
