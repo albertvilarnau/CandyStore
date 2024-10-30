@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="../JAVASCRIPT/script_page.js"></script>
-    <link rel="stylesheet" href="../STYLE/page.css">
+    <link rel="stylesheet" href="../STYLE/header.css">
+    <link rel="stylesheet" href="../STYLE/general.css">
+    <link rel="stylesheet" href="../STYLE/cesta.css">
+
 </head>
 
 <body>
@@ -43,61 +46,53 @@
         </div>
     </header>
 
-    <div class="resumen-compras">
+    <div class="productos">
         <h2>Has comprado:</h2>
-        <div class="compras-lista">
-            <div class="compra">
+        <div class="container_cesta">
+            <div class="product_user product_user0">
                 <img src="../IMAGES/producto_chupachups.png" alt="ChupaChups">
                 <h3>ChupaChups</h3>
-                <p>Cantidad: <span id="cantidad_chupachups">2</span></p>
+                <p>Cantidad: <span id="cantidad_compra0">0</span></p>
             </div>
-            <div class="compra">
+            <div class="product_user product_user1">
                 <img src="../IMAGES/producto_petazeta.png" alt="Peta Zetas">
                 <h3>Peta Zetas</h3>
-                <p>Cantidad: <span id="cantidad_petazetas">1</span></p>
+                <p>Cantidad: <span id="cantidad_compra1">0</span></p>
             </div>
-            <div class="compra">
+            <div class="product_user product_user2">
                 <img src="../IMAGES/producto_maxiroll.png" alt="Maxiroll boomer">
                 <h3>Maxiroll boomer</h3>
-                <p>Cantidad: <span id="cantidad_maxiroll">3</span></p>
+                <p>Cantidad: <span id="cantidad_compra2">0</span></p>
             </div>
-            <div class="compra">
+            <div class="product_user product_user3">
                 <img src="../IMAGES/producto_pez.png" alt="Caramelos Pez">
                 <h3>Caramelos Pez</h3>
-                <p>Cantidad: <span id="cantidad_pez">1</span></p>
+                <p>Cantidad: <span id="cantidad_compra3">0</span></p>
             </div>
-            <div class="compra">
+            <div class="product_user product_user4">
                 <img src="../IMAGES/producto_kinderbueno.png" alt="Kinder Bueno">
                 <h3>Kinder Bueno</h3>
-                <p>Cantidad: <span id="cantidad_kinderbueno">3</span></p>
+                <p>Cantidad: <span id="cantidad_compra4">0</span></p>
             </div>
-            <div class="compra">
+            <div class="product_user product_user5">
                 <img src="../IMAGES/producto_frocher.png" alt="Ferrero Rocher">
                 <h3>Ferrero Rocher</h3>
-                <p>Cantidad: <span id="cantidad_ferrerorocher">1</span></p>
+                <p>Cantidad: <span id="cantidad_compra5">0</span></p>
             </div>
-            <div class="compra">
+            <div class="product_user product_user6">
                 <img src="../IMAGES/producto_lindt.png" alt="Bombón Lindt">
                 <h3>Bombón Lindt</h3>
-                <p>Cantidad: <span id="cantidad_lindt">2</span></p>
+                <p>Cantidad: <span id="cantidad_compra6">0</span></p>
             </div>
-            <div class="compra">
+            <div class="product_user product_user7">
                 <img src="../IMAGES/producto_toblerone.png" alt="Toblerone">
                 <h3>Toblerone</h3>
-                <p>Cantidad: <span id="cantidad_toblerone">1</span></p>
+                <p>Cantidad: <span id="cantidad_compra7">0</span></p>
             </div>
         </div>
 
-        <div class="total">
-            <h2>Total de la compra: <span id="total_compra">25,00 €</span></h2>
-        </div>
-
-        <button class="volver" onclick="location.href='index.html'">Volver a la tienda</button>
+        <button class="volver" onclick="location.href='store.html'">Volver a la tienda</button>
     </div>
 
-    <footer>
-        <p>&copy; 2024 Candy Store. Todos los derechos reservados.</p>
-    </footer>
-    
 </body>
 </html>

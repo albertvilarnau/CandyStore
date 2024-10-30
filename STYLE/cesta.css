@@ -6,8 +6,6 @@
     font-size: 20px;
 }
 
-
-
 .product_cesta img {
     width: 150px; /* Ajusta el tamaño de la imagen */
 }
@@ -62,4 +60,38 @@ button:hover {
     font-weight: bold;
     cursor: pointer; 
   }
-  
+
+  .product_user {
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid #e0e0e0;
+    display: flex;
+}
+
+.product_user img {
+    width: 50px;
+}
+
+.productos{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-size: 20px;
+    flex: 1;
+}
+
+.productos *{
+    flex: 1;
+}
+
+.product_user p{
+    flex: 1;
+    font-size: 20px;
+    margin: 20px;
+}
+
+h2{
+    margin: 20px;
+}
+
