@@ -42,14 +42,17 @@ header {
     height: 50px;
 }
 
-#total_cart,
-#user_header {
-    position: absolute; /* Posicionar el contador sobre el ícono */
+#total_cart {
+    position: absolute;
     top: -5px; /* Ajusta según sea necesario */
-    right: -10px; /* Ajusta según sea necesario */
+    right: -3px; /* Ajusta según sea necesario */
     background-color: #fe7b63; /* Color de fondo del contador */
     color: white; /* Color del texto del contador */
     border-radius: 50%; /* Forma redonda */
     padding: 2px 5px; /* Espaciado interno del contador */
     font-size: 15px; /* Tamaño de fuente del contador */
+    height: 25px;
+    width: 25px;
+    align-items: center;
+    display: grid;
 }
